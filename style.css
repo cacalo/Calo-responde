@@ -1,0 +1,57 @@
+*{
+	text-align: center;
+}
+
+#tooltip{
+	visibility: visible;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background-color: rgb(84, 84, 84);
+	padding: 10px;
+	border-radius: 25px;
+	width: 200px;
+	color: white;
+}
+
+#icono{
+	cursor: pointer;
+}
+
+#tooltipContainer{
+	display: inline;
+	position: relative;
+}
+
+.escondido{
+	visibility:hidden !important;
+}
+
+button{
+	display: block;
+	margin: 20px auto;
+	cursor: pointer;
+	user-select: none;
+}
+
+input{
+	width: 500px;
+}
+
+.correcta{
+}
+
+.correcta:focus{
+	border: 2px solid white;
+	border-color: rgb(0, 255, 170);
+
+}
+
+#respuesta{
+	margin:auto;
+	padding: 20px;
+	border-radius: 15px;
+	background-color: rgb(56, 56, 56);
+	color: white;
+	width: 500px;
+}
