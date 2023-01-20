@@ -2,11 +2,30 @@
 	text-align: center;
 }
 
+body{
+	height: 100vh;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+main{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+h3:last-of-type{
+	display: inline;
+}
+
 #tooltip{
 	visibility: visible;
 	position: absolute;
-	top: 0px;
-	right: 0px;
+	bottom: 10px;
+	right: 60px;
 	background-color: rgb(84, 84, 84);
 	padding: 10px;
 	border-radius: 25px;
@@ -15,7 +34,13 @@
 }
 
 #icono{
+	display: inline-block;
 	cursor: pointer;
+	background-color: rgb(0, 0, 255);
+	color: white;
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
 }
 
 #tooltipContainer{
@@ -35,10 +60,12 @@ button{
 }
 
 input{
+	margin: auto;
 	width: 500px;
 }
 
-.correcta{
+#frase{
+	width: calc(500px - 20px );
 }
 
 .correcta:focus{
@@ -54,4 +81,8 @@ input{
 	background-color: rgb(56, 56, 56);
 	color: white;
 	width: 500px;
+}
+
+footer{
+	margin-top: auto;
 }

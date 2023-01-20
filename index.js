@@ -1,10 +1,13 @@
+//Elementos
 const preguntaElement = document.querySelector("#pregunta");
 const fraseElement = document.querySelector("#frase");
 const respuestaElement = document.querySelector("#respuesta");
+const footer = document.querySelector("footer");
+
+//Variables
 let fraseSecreta = "Calo, por favor me gustaría que me respondas";
 let estadoTruco = false;
 let respuestaSecreta = ""
-
 
 
 //Tooltip
@@ -63,7 +66,7 @@ function escribirLetraCorrecta(){
 
 function responder(respuesta){
 	respuestaElement.textContent = respuesta;
-
+	footer.classList.toggle("escondido",false);
 }
 
 preguntaElement.focus();
