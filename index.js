@@ -3,6 +3,8 @@ const preguntaElement = document.querySelector("#pregunta");
 const fraseElement = document.querySelector("#frase");
 const respuestaElement = document.querySelector("#respuesta");
 const footer = document.querySelector("footer");
+const preguntarBoton = document.querySelector("#preguntar");
+const reiniciarBoton = document.querySelector("#reiniciar");
 
 //Variables
 let fraseSecreta = "Calo, por favor me gustaría que me respondas";
@@ -38,7 +40,7 @@ fraseElement.addEventListener("input", (event) => {
 	fraseElement.classList.toggle("correcta",fraseElement.value === fraseSecreta) 
 });
 
-document.querySelector("#preguntar").addEventListener("click",()=> {
+preguntarBoton.addEventListener("click",()=> {
 	if(preguntaElement.value === "") return responder("No puedo responder a una pregunta vacía");
 	if(
 		fraseElement.value !== fraseSecreta
@@ -49,7 +51,7 @@ document.querySelector("#preguntar").addEventListener("click",()=> {
 	responder(respuestaSecreta);
 })
 
-document.querySelector("#reiniciar").addEventListener("click",()=> {
+reiniciarBoton.addEventListener("click",()=> {
 	estadoTruco = false;
 	fraseSecreta = "";
 	preguntaElement.value = "";

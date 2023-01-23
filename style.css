@@ -1,5 +1,6 @@
 *{
 	text-align: center;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 body{
@@ -15,6 +16,10 @@ main{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	margin: 20px;
+	padding: 20px;
+	border-radius: 10px;
+	background-color: rgba(0, 0, 0, 0.075);
 }
 
 h3:last-of-type{
@@ -52,16 +57,26 @@ h3:last-of-type{
 	visibility:hidden !important;
 }
 
+#botones{
+	display: flex;
+	justify-content: center;
+}
+
 button{
-	display: block;
-	margin: 20px auto;
+	margin: 20px;
 	cursor: pointer;
 	user-select: none;
+	font-size: larger;
+	background-color: rgb(34, 34, 34);
+	color: white;
+	padding: 5px 10px;
+	border-radius: 10px;
 }
 
 input{
 	margin: auto;
 	width: 500px;
+	font-size: larger;
 }
 
 #frase{
