@@ -5,6 +5,7 @@ const respuestaElement = document.querySelector("#respuesta");
 const footer = document.querySelector("footer");
 const preguntarBoton = document.querySelector("#preguntar");
 const reiniciarBoton = document.querySelector("#reiniciar");
+const icono = document.querySelector("#icono");
 
 //Variables
 let fraseSecreta = "Calo, por favor me gustaría que me respondas";
@@ -13,11 +14,11 @@ let respuestaSecreta = ""
 
 
 //Tooltip
-document.querySelector("#icono").addEventListener("mouseover", (event) => {
+icono("#icono").addEventListener("mouseover", (event) => {
 	tooltip.classList.toggle("escondido",false)
 });
 
-document.querySelector("#icono").addEventListener("mouseout", (event) => {
+icono("#icono").addEventListener("mouseout", (event) => {
 	tooltip.classList.toggle("escondido",true)
 });
 
@@ -56,14 +57,14 @@ reiniciarBoton.addEventListener("click",()=> {
 	fraseSecreta = "";
 	preguntaElement.value = "";
 	fraseElement.value = "";
-	respuestaElement.textContent = "Hazme una pregunta"
+	responder("Hazme una pregunta");
 	preguntaElement.focus();
 })
 
 function escribirLetraCorrecta(){
 	const letraAAgregar = fraseSecreta[fraseElement.value.length-1]
 	if(letraAAgregar === undefined) return estadoTruco = false;
-	fraseElement.value = fraseElement.value.substring(0,fraseElement.value.length-1)+letraAAGregar;
+	fraseElement.value = fraseElement.value.substring(0,fraseElement.value.length-1)+letraAAgregar;
 }
 
 function responder(respuesta){
