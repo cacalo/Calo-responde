@@ -61,8 +61,8 @@ reiniciarBoton.addEventListener("click",()=> {
 })
 
 function escribirLetraCorrecta(){
-	const letraAAGregar = fraseSecreta[fraseElement.value.length-1]
-	if(letraAAGregar === undefined) return estadoTruco = false;
+	const letraAAgregar = fraseSecreta[fraseElement.value.length-1]
+	if(letraAAgregar === undefined) return estadoTruco = false;
 	fraseElement.value = fraseElement.value.substring(0,fraseElement.value.length-1)+letraAAGregar;
 }
 
