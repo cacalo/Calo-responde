@@ -14,11 +14,11 @@ let respuestaSecreta = ""
 
 
 //Tooltip
-icono("#icono").addEventListener("mouseover", (event) => {
+icono.addEventListener("mouseover", (event) => {
 	tooltip.classList.toggle("escondido",false)
 });
 
-icono("#icono").addEventListener("mouseout", (event) => {
+icono.addEventListener("mouseout", (event) => {
 	tooltip.classList.toggle("escondido",true)
 });
 
